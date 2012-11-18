@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Read";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*page div is in the layout page in default template
+move page div as a section into individual pages so we can give them ids
+this allows us to attach pageshow events so we can load data with ajax calls when page is shown*@
+
+@section PageStart{
+<div id="PostListPage" data-role="page" data-theme="b" data-add-back-btn="true">
+}
+
+@section Header{
+    <a href='#' class='ui-btn-left' data-icon='arrow-l' onclick="history.back(); return false">Back</a>
+    <h1>@ViewBag.HeaderString</h1>
+    <a href="/Home/Index">Home</a>
+}
+
+    <div data-role="content">
+        <ul id="postList" data-role="listview"  data-inset="true"></ul>
+    </div>
+
+@section Footer{
+    <a href="/Account/Index" class='ui-btn-left'>Your account</a><h1>- MobileBlog -</h1>
+}
+
+@section PageEnd{
+</div>
+}

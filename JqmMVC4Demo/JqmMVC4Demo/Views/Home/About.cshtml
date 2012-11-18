@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section PageStart{
+<div id="AboutPage" data-role="page" data-theme="b" data-add-back-btn="true">
+}
+
+@section Header{
+    <a href='#' class='ui-btn-left' data-icon='arrow-l' onclick="history.back(); return false">Back</a>
+    <h1>@ViewBag.HeaderString</h1>
+    <a href="/Home/Index">Home</a>
+}
+
+    <div data-role="fieldcontain">
+        <p>MobileBlog</p>
+        <p>Adapted (liberally!) from example by: <a href="http://twitter.com/chadlung">Chad Lung</a></p>
+        <p>Powered by: <a href="http://jquerymobile.com">JQuery Mobile</a></p>
+    </div>
+
+@section Footer{
+    <a href="/Account/Index" class='ui-btn-left'>Your account</a><h1>- MobileBlog -</h1>
+}
+
+@section PageEnd{
+</div>
+}

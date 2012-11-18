@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section PageStart{
+<div id="IndexPage" data-role="page" data-theme="b">
+}
+@section Header{
+    <h1>@ViewBag.HeaderString</h1>
+}
+
+    <ul data-role="listview">
+            <li>
+                @Html.ActionLink("Create New Post", "Create")
+            </li>
+            <li>
+                @Html.ActionLink("Read Blog", "Read")
+            </li>
+            <li>
+                @Html.ActionLink("About MobileBlog", "About")
+            </li>
+        </ul>
+
+@section Footer{
+    <h1>- MobileBlog -</h1>
+}
+
+@section PageEnd{
+ </div>
+}
+
+ 

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Read Post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section PageStart{
+<div id="ReadPostPage"  data-role="page" data-theme="b" data-add-back-btn="true">
+}
+
+@section Header{
+    <a href='#' class='ui-btn-left' data-icon='arrow-l' onclick="history.back(); return false">Back</a>
+    <h1>@ViewBag.HeaderString</h1>
+    <a href="/Home/Index">Home</a>
+}
+
+
+    <div id="postDisplay" data-role="fieldcontain"></div>
+
+
+@section Footer{
+    <a href="/Account/Index" class='ui-btn-left'>Your account</a><h1>- MobileBlog -</h1>
+}
+
+@section PageEnd{
+</div>
+}
+

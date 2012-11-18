@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+@section PageStart{
+ <div id="CreatePostPage" data-role="page" data-theme="b" data-add-back-btn="true">
+}
+
+@section Header{
+     <a href='#' class='ui-btn-left' data-icon='arrow-l' onclick="history.back(); return false">Back</a>
+     <h1>@ViewBag.HeaderString</h1>
+     <a href="/Home/Index">Home</a>
+}
+
+    <form id="savePostForm">         
+        <div data-role="fieldcontain">
+            <label for="PostTitle">Post Title</label>
+            <input class="text-box single-line" id="PostTitle" name="PostTitle" type="text" value="" />
+            <div id="PostTitleValidationMessage"></div>
+            <label for="PostContent">Post Content</label>
+            <textarea cols="20" id="PostContent" name="PostContent" rows="2"></textarea>
+            <div id="PostContentValidationMessage"></div>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"><a data-role="button" href="/">Cancel</a></div>
+                <div class="ui-block-b"><button data-theme="b" id="submit" type="submit">Submit</button></div>
+            </fieldset>
+            <h3 id="notification"></h3>
+        </div>
+    </form>
+ 
+
+@section Footer{
+    <a href="/Account/Index" class='ui-btn-left'>Your account</a><h1>- MobileBlog -</h1>
+}
+
+@section PageEnd{
+</div>
+}
